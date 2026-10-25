@@ -1,0 +1,27 @@
+:root{--navy:#1e2a5a;--teal:#0d9488;--bg:#f7f8fa;--ok:#15803d;--warn:#b45309;--err:#b91c1c}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:#1e293b}
+main{max-width:480px;margin:0 auto;padding:16px}
+.card{background:#fff;border-radius:16px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);margin-bottom:12px}
+.balance{font-size:2rem;font-weight:700;color:var(--navy)}
+.meal{display:flex;justify-content:space-between;align-items:center;width:100%;border:2px solid #e2e8f0;
+  background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;font-size:1rem;cursor:pointer;min-height:64px}
+.meal[aria-pressed=true]{border-color:var(--teal);background:#f0fdfa}
+.btn{width:100%;padding:14px;border:0;border-radius:14px;background:var(--navy);color:#fff;font-size:1rem}
+.btn:disabled{opacity:.5}
+.msg{padding:12px;border-radius:12px;margin-top:12px}
+.msg.ok{background:#dcfce7;color:var(--ok)}.msg.err{background:#fee2e2;color:var(--err)}
+.warn{color:var(--warn)}
+.wide{max-width:960px}
+table.t{width:100%;border-collapse:collapse;font-size:.9rem}
+table.t th,table.t td{text-align:left;padding:8px;border-bottom:1px solid #e2e8f0}
+.tblwrap{overflow-x:auto}
+.sel{padding:10px;border-radius:10px;border:1px solid #cbd5e1;margin:0 8px 8px 0;font-size:1rem}
+.chip{display:inline-block;padding:2px 8px;border-radius:999px;background:#e2e8f0;font-size:.8rem}
+.btn.sm{width:auto;padding:8px 12px;font-size:.9rem}
+.print-only{display:none}
+@media print{.no-print{display:none!important}.print-only{display:block}body{background:#fff}}
+.nav{display:flex;gap:4px;overflow-x:auto;white-space:nowrap;padding:6px 12px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.08);position:sticky;top:0;z-index:5}
+.nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:10px;color:var(--navy);text-decoration:none;font-size:.95rem}
+.nav a[aria-current=page]{background:#e0e7ff;font-weight:700}
+.nav a:focus-visible,.btn:focus-visible,.sel:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
